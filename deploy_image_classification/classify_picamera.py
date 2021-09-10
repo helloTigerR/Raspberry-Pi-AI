@@ -79,8 +79,8 @@ def main():
   results = classify_image(interpreter, image)
   elapsed_ms = (time.time() - start_time) * 1000
   label_id, prob = results[0]
-  camera.annotate_text = '%s %.2f\n%.1fms' % (labels[label_id], prob,
-                                              elapsed_ms)
+  print('%s %.2f\n%.1fms' % (labels[label_id], prob,
+                                              elapsed_ms))
 
   #下边是PiCamera
   # with picamera.PiCamera(resolution=(640, 480), framerate=30) as camera:
